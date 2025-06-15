@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  app:
+    image: piper-fork
+    volumes:
+      # Bind mount - maps host folder directly
+      - ./workspace:/app/workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
