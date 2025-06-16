@@ -1,0 +1,1 @@
+docker run --gpus all -v ./workspace:/workspace -it piper-fork bash

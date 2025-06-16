@@ -2,6 +2,9 @@ version: '3.8'
 services:
   app:
     image: piper-fork
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
     volumes:
       # Bind mount - maps host folder directly
       - ./workspace:/app/workspace
